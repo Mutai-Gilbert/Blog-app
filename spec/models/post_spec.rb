@@ -11,6 +11,13 @@ describe Post, type: :model do
     expect(test_post.title).to eq 'Hello'
   end
 
+  it 'validates the length of title is at most 250 characters' do
+    test_post.title = 'a' * 251
+    expect(test_post).to_not be_valid
+    test_post.title = 'a' * 250
+    expect(test_post).to be_valid
+  end
+
   it 'should have a text' do
     expect(test_post.text).to eq 'This is my first post'
   end
@@ -35,6 +42,10 @@ describe Post, type: :model do
     subject.comments_counter = -2
     expect(subject).to_not be_valid
   end
+  it 'increments the post_counter by 1' do
+    expect(test_user.post_counter).to eq 1
+  end
+
   it 'post should return top 5 comments' do
     test_post = Post.create(author: test_user, title: 'Hello', text: 'This is my first post', comments_counter: 0,
                             likes_counter: 0)
