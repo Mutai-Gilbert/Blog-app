@@ -1,1 +1,14 @@
-<h1>User List</h1>
+<% render 'shared/user', user: @user%>
+<div class="user-bio"><%@=user.bio%> </div>
+<ul class="user-card-posts">
+<% if @user.top_3_posts.empty? %>
+<p class="post-card-no-click">There are no posts </p>
+<% else %>
+<% @user.top_3_posts.each do |post| %>
+    <li>
+    <%= render 'shared/post', post: post%>
+    </li>
+    <%end%>
+    <%end%>
+</ul>
+<div class="see-all-post-btn-container"><%= link_to "See all posts", see_all_posts(@user), class:"see-all-post-btn"%></div>

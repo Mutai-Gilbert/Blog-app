@@ -1,0 +1,6 @@
+<ul class="comment-card">
+<% comments.each do |comment|%>
+    <li><%= comment.author.name%>: <%=comment.text%></li>
+    <%end%>
+    <%= 'No comments' if comments.empty?%>
+</ul>

@@ -1,1 +1,7 @@
-<h1>User Details</h1>
+<ul>
+<% @users.each do |user| %>
+    <li>
+    <%= render 'shared/user', user: user%>
+    </li>
+<%end%>
+</ul>

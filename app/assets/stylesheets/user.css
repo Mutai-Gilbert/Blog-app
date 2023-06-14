@@ -1,0 +1,50 @@
+.user-card {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3%;
+  }
+  
+  .profile {
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+  }
+  
+  .user-card-body {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    border: 1px solid black;
+  }
+  
+  .user-card-body:hover {
+    background-color: lightgreen;
+  }
+  
+  .user-post-count {
+    align-self: flex-end;
+    margin-top: auto;
+  }
+  
+  .user-bio {
+    width: 100%;
+    border: 1px solid black;
+    padding: 2%;
+  }
+  
+  .user-card-post-ul {
+    margin-bottom: 3%;
+  }
+  
+  .see-all-post-btn-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .see-all-post-btn {
+    padding: 5px 10px;
+    border: 2px solid black;
+    box-shadow: 4px 4px 4px black;
+  }
