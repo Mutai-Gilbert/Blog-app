@@ -1,8 +1,9 @@
-<article class='post-article'>
+
+<article class='post-card-no-click'>
 <div class='post-card-title'>
-<h1><%=@post.title%>by<%=@post.author.name%></h1>
-<div class='post-card-count-top'>Comments: <%=@post.comments_counter%>, Likes: <%=@post.likes_counter%> </div>
+<h1><%=@post.title%> by <%=@post.author.name%></h1>
+<div class='post-card-count-top'>Comments: <%=@post.comments_counter%>, Likes: <%=@post.likes_counter%></div>
 </div>
 <div><%=@post.text%></div>
 </article>
-<%= render 'shared/comment', comments: @post.top_5_comment%>
+<%= render 'shared/comment', comments: @post.top_5_comment%> 
