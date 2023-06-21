@@ -19,7 +19,7 @@ RSpec.describe Post, type: :system do
     end
 
     it 'I can see the number of posts the user has written.' do
-      expect(page).to have_content("Number of posts: 1")
+      expect(page).to have_content('Number of posts: 1')
     end
 
     it 'I can see a post\'s title.' do
@@ -31,15 +31,15 @@ RSpec.describe Post, type: :system do
     end
 
     it 'I can see the first comment on a post.' do
-        expect(page).to have_content("#{@user.name}: #{@comment.text}")
+      expect(page).to have_content("#{@user.name}: #{@comment.text}")
     end
 
     it 'I can see how many comments a post has.' do
-      expect(page).to have_content("Comments: 1")
+      expect(page).to have_content('Comments: 1')
     end
 
     it 'I can see how many likes a post has.' do
-      expect(page).to have_content("Likes: 1")
+      expect(page).to have_content('Likes: 1')
     end
 
     it 'I can see a section for pagination if there are more posts than fit on the view.' do

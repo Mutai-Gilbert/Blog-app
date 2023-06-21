@@ -8,8 +8,8 @@ RSpec.describe Post, type: :system do
       @first_post = Post.create(author_id: @user.id, title: 'My medium post', text: 'This is my first post')
       @comment = Comment.create(author: @user, post: @first_post, text: 'This is my comment')
       allow_any_instance_of(ApplicationController)
-      .to receive(:current_user)
-      .and_return(User.create(name: 'Tom', photo: 'https://unsplash.com/photos', bio: 'Teacher from Mexico.'))
+        .to receive(:current_user)
+        .and_return(User.create(name: 'Tom', photo: 'https://unsplash.com/photos', bio: 'Teacher from Mexico.'))
       Like.create(author: @user, post: @first_post)
       visit user_post_path(@user, @first_post)
     end
