@@ -15,26 +15,5 @@ RSpec.describe Post, type: :system do
       Like.create(author: @user, post: @first_post)
       visit user_post_path(@user, @first_post)
     end
-    # it 'I can see a post title' do
-    #   expect(page).to have_content(@first_post.title)
-    # end
-    # it 'I can see who wrote the post.' do
-    #   expect(page).to have_content("by #{@user.name}")
-    # end
-    # it 'I can see how many comments it has.' do
-    #   expect(page).to have_content('Comments: 1')
-    # end
-    # it 'I can see how many likes it has.' do
-    #   expect(page).to have_content('Likes: 1')
-    # end
-    # it 'I can see the post body.' do
-    #   expect(page).to have_content(@first_post.text)
-    # end
-    # it 'I can see the username of each commentor.' do
-    #   expect(page).to have_content("by #{@user.name}")
-    # end
-    # it 'I can see the comment each commentor left.' do
-    #   expect(page).to have_content("#{@user.name}: #{@comment.text}")
-    # end
   end
 end
