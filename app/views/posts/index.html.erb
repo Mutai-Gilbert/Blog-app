@@ -1,12 +1,14 @@
 <%= render 'shared/user', user: @user%>
 <ul>
-<% if @posts.empty? %>
+<% if @user.post.empty? %>
   <p class='post-card-no-click'>No posts</p>
 <% else %>
-<% @posts.each do |post|%>
+<% @user.post.each do |post|%>
 <li>
   <%= render 'shared/post', post: post%>
   <%= render 'shared/comment', comments: post.top_5_comment%>
 </li>
 <%end%>
 <%end%>
+</ul>
+<div class='see-all-post-btn-container'><a class='see-all-post-btn'>Pagination</a></div>
