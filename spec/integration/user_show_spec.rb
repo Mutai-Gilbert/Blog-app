@@ -11,20 +11,20 @@ RSpec.describe 'Users', type: :system do
       visit user_path(@first_user)
     end
 
-    it 'I can see the users profile picture.' do
+    it 'I can see the user\'s profile picture.' do
       expect(page).to have_css("img[src='https://unsplash.com/photos']")
     end
 
-    it 'I can see the users username.' do
+    it 'I can see the user\'s username.' do
       expect(page).to have_content(@first_user.name)
     end
-    it 'I can see the number of posts the user has written.' do
+    it 'I can see the number of post\'s the user has written.' do
       expect(page).to have_content(@first_post.title)
     end
-    it 'I can see the users bio.' do
+    it 'I can see the user\'s bio.' do
       expect(page).to have_content(@first_user.bio)
     end
-    it 'I can see the users first 3 posts.' do
+    it 'I can see the user\'s first 3 post\'s.' do
       expect(page).to have_content('first')
       expect(page).to have_content('This is my first post')
       expect(page).to have_content('second')
@@ -32,15 +32,15 @@ RSpec.describe 'Users', type: :system do
       expect(page).to have_content('third')
       expect(page).to have_content('This is my third post')
     end
-    it 'I can see a button that lets me view all of a users posts.' do
-      expect(page).to have_link('See all posts')
+    it 'I can see a button that lets me view all of a user\'s post\'s.' do
+      expect(page).to have_link('See all post\'s')
     end
-    it 'When I click a users post, it redirects me to that posts show page.' do
+    it 'When I click a user\'s post, it redirects me to that post\'s show page.' do
       click_link('first')
       expect(page).to have_current_path(user_post_path(@first_user, @first_post))
     end
-    it 'When I click to see all posts, it redirects me to the users posts index page.' do
-      click_link('See all posts')
+    it 'When I click to see all post\'s, it redirects me to the user\'s post\'s index page.' do
+      click_link('See all post\'s')
       expect(page).to have_current_path(user_post_path(@first_user))
     end
   end
