@@ -3,8 +3,10 @@ require 'rails_helper'
 RSpec.describe Post, type: :system do
   describe 'Post index page' do
     before do
-      @user = User.create(name: 'Gilbert', photo: 'https://unsplash.com/photos', bio: 'A developer from Kenya.')
-      @first_post = Post.create(author_id: @user.id, title: 'First post', text: 'First post')
+      @user = User.create(name: 'Gilbert', photo: 'https://unsplash.com/photos', bio: 'A developer from Kenya.',
+                          post_counter: 0)
+      @first_post = Post.create(author_id: @user.id, title: 'First post', text: 'First post', comments_counter: 0,
+                                likes_counter: 0)
       @comment = Comment.create(author: @user, post: @first_post, text: 'This is my comment')
       Like.create(author: @user, post: @first_post)
       visit user_posts_path(@user)
@@ -43,7 +45,7 @@ RSpec.describe Post, type: :system do
     end
 
     it 'I can see a section for pagination if there are more posts than fit on the view.' do
-      expect(page).to have_selector('agination')
+      expect(page).to have_content('Pagination')
     end
 
     it 'When I click on a post, it redirects me to that post\'s show page.' do
