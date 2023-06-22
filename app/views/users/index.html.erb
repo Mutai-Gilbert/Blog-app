@@ -1,0 +1,9 @@
+<h1 class='user-wel'>Welcome <%=@current_user.name%></h1>
+<div class='post-btn-container'><%= link_to "Create Post", new_post_path, class: 'common-btn' %></div>
+<ul>
+<% @users.each do |user|%>
+<li>
+  <%= render 'shared/user', user: user%>
+</li>
+<%end%>
+</ul> 
