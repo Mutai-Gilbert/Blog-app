@@ -1,3 +1,4 @@
+<div class='devise-container'>
 <h2>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -5,12 +6,13 @@
 
   <div class="field">
   <%= f.label :name %><br />
-  <%= f.text_field :name, autofocus: true, autocomplete: "email" %>
+  <%= f.text_field :name, autofocus: true, autocomplete: "email", class: 'device-width in-field' %>
   </div>
 
+  <div class='devise-container'>
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'device-width in-field' %>
   </div>
 
   <div class="field">
@@ -18,17 +20,18 @@
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f.password_field :password, autocomplete: "new-password", class: 'device-width in-field' %>
   </div>
 
   <div class="field">
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'device-width in-field' %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Sign up", class: 'device-width common-btn' %>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>

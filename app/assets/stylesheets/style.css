@@ -20,6 +20,28 @@ body {
   padding: 5% 0;
 }
 
+header,
+.header-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+header {
+  margin-bottom: 3%;
+}
+
+.notice {
+  color: green;
+  text-align: center;
+}
+
+.alert {
+  color: red;
+  text-align: center;
+}
+
 @media all and (min-width: 768px) {
   main {
     width: 1100px;
@@ -198,4 +220,79 @@ body {
 
 .in-field {
   padding: 1% 0;
+}
+
+/* Devise */
+
+.actions input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Confirmatioons */
+/* Styles for the form */
+.conformations {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.field {
+  margin-bottom: 15px;
+}
+
+.actions {
+  text-align: center;
+  margin-top: 15px;
+}
+
+/* Styles for the form elements */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #0069d9;
+}
+
+/* Styles for error messages */
+.error-messages {
+  color: red;
+  margin-bottom: 10px;
+}
+
+/* Styles for shared links */
+.shared-links {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.shared-links a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.shared-links a:hover {
+  text-decoration: underline;
 }

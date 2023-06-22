@@ -1,0 +1,8 @@
+<%= form_with model:@user, html: { class: 'post-form'} do |form|%>
+<h1>Update profile</h1>
+<%=form.label :photo%>
+<%=form.text_field :photo, class: 'post-text-field'%>
+<%=form.label :bio%>
+<%=form.text_area :bio, class: 'post-text-area'%>
+<%=form.submit "Update", class: 'common-btn'%>
+<%end%>
