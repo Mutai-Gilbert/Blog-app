@@ -11,6 +11,6 @@ class Post < ApplicationRecord
   end
 
   def top_5_comment
-    comment.order(created_at: :desc).limit(5)
+    comment.loaded? ? comment.sort_by(&:created_at).reverse.take(5) : comment.order(created_at: :desc).take(5)
   end
 end

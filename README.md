@@ -15,13 +15,13 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
-  - [💻 Getting Started ](#-getting-started-)
+  - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
     - [Install](#install)
+    - [💾 Database](#-database)
     - [Usage](#usage)
     - [Run tests](#run-tests)
-    - [Deployment](#deployment)
   - [👥 Authors ](#-authors-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
@@ -139,6 +139,7 @@ To run tests, run the following command:
 👤 **Gilbert Mutai**
 
 - GitHub: [@mutai-gilbert](https://github.com/Mutai-Gilbert/)
+- GitHub: [@Thinus01](https://github.com/Thinus01)
 
 <!-- FUTURE FEATURES -->
 

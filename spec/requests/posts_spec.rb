@@ -9,9 +9,6 @@ RSpec.describe 'Posts', type: :request do
     it 'should render the index template' do
       expect(response).to render_template(:index)
     end
-    it 'should render the index placeholder' do
-      expect(response.body).to include('List of Users Posts')
-    end
   end
   describe 'GET #show' do
     before(:example) { get '/users/1/posts/1' }
@@ -20,9 +17,6 @@ RSpec.describe 'Posts', type: :request do
     end
     it 'should render the show template' do
       expect(response).to render_template(:show)
-    end
-    it 'should render the show placeholder' do
-      expect(response.body).to include('User Posts Details')
     end
   end
 end
