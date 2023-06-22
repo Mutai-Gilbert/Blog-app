@@ -20,6 +20,28 @@ body {
   padding: 5% 0;
 }
 
+header,
+.header-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+header {
+  margin-bottom: 3%;
+}
+
+.notice {
+  color: green;
+  text-align: center;
+}
+
+.alert {
+  color: red;
+  text-align: center;
+}
+
 @media all and (min-width: 768px) {
   main {
     width: 1100px;
@@ -167,4 +189,111 @@ body {
 .comment-field {
   width: 15rem;
   height: 2rem;
+}
+
+.devise-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.devise-container a {
+  padding: 1px 2px;
+  border: 2px solid black;
+  box-shadow: 4px 4px 4px black;
+  margin-bottom: 4px;
+}
+
+.devise-container h2 {
+  margin-bottom: 3%;
+}
+
+.devise-form,
+.new_user {
+  width: 70%;
+}
+
+.device-width {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.in-field {
+  padding: 1% 0;
+}
+
+/* Devise */
+h2.log-in {
+  font-size: 24px;
+  color: #333;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.actions input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btns {
+  padding: 5px;
+  background-color: #1b93d3;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.confirmations {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.field {
+  margin-bottom: 15px;
+}
+
+.actions {
+  text-align: center;
+  margin-top: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"]:hover {
+  background-color: #0069d9;
+}
+
+.error-messages {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.shared-links {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.shared-links a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.shared-links a:hover {
+  text-decoration: underline;
 }
