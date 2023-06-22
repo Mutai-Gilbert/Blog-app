@@ -195,6 +195,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 0.5rem;
 }
 
 .devise-container a {
@@ -223,6 +224,12 @@ header {
 }
 
 /* Devise */
+h2.log-in {
+  font-size: 24px;
+  color: #333;
+  margin: 0;
+  padding: 10px 0;
+}
 
 .actions input[type="submit"] {
   padding: 10px 20px;
@@ -233,8 +240,15 @@ header {
   font-size: 16px;
 }
 
-.conformations {
-  max-width: 400px;
+.btns {
+  padding: 5px;
+  background-color: #1b93d3;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.confirmations {
+  max-width: 100%;
   margin: 0 auto;
 }
 
