@@ -79,4 +79,5 @@ group :development, :test do
 end
 
 # For registration and login of users.
+gem 'cancancan'
 gem 'devise', '~> 4.9'

@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
   def index
-    @user = User.find(params[:user_id])
-    @post = @user.post.includes(:comments)
+    @user = User.includes(post: [:author, { comment: [:author] }]).find(params[:user_id])
   end
 
   def show
@@ -15,7 +15,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = current_user.post.new(post_param)
+    @post = current_user.post.new(post_params)
     if @post.save
       redirect_to user_post_path(current_user, @post)
     else
@@ -23,9 +23,16 @@ class PostsController < ApplicationController
     end
   end
 
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+
+    redirect_to root_path, status: :see_other
+  end
+
   private
 
-  def post_param
+  def post_params
     params.require(:post).permit(:title, :text)
   end
 end

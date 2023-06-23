@@ -1,6 +1,11 @@
 <ul class='comment-card'>
 <% comments.each do |comment|%>
-<li><%= comment.author.name%>: <%=comment.text%></li>
+    <li class='comment-li'>
+    <span><%= comment.author.name%>: <%=comment.text%></span>
+    <% if can? :destroy, comment %>
+      <%= button_to "Delete Comment", comment_path(comment), method: :delete, class: ['common-btn', 'rigth-btn', 'red-bth']%>
+      <%end%>
+    </li>
 <%end%>
 <%= 'No comments' if comments.empty?%>
 </ul> 

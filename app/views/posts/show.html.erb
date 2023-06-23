@@ -6,6 +6,9 @@
 </div>
 <div><%=@post.text%></div>
 <%= button_to "Like", post_likes_path(@post), method: :post, class: ['common-btn', 'rigth-btn'] %>
+<% if can? :destroy, @post %>
+<%= button_to "Delete Post", post_path(@post), method: :delete, class: ['common-btn', 'rigth-btn', 'red-bth']%>
+<%end%>
 </article>
-<%= render 'shared/comment', comments: @post.top_5_comment%>
+<%= render 'shared/comment', comments: @post.comment%>
 <%= render 'shared/comment_form', post: @post, comment: @comment%> 
