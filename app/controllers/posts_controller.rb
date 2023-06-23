@@ -28,7 +28,7 @@ class PostsController < ApplicationController
     @post.destroy
 
     redirect_to root_path, status: :see_other
-  end 
+  end
 
   private
 
