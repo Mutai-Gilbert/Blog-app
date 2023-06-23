@@ -108,6 +108,10 @@ header {
   background-color: green;
 }
 
+.red-bth {
+  background-color: red;
+}
+
 .user-wel {
   text-align: center;
 }
@@ -296,4 +300,15 @@ input[type="submit"]:hover {
 
 .shared-links a:hover {
   text-decoration: underline;
+}
+
+.comment-li {
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.comment-li .button_to {
+  margin-left: auto;
 }

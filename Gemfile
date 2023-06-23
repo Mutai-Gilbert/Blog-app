@@ -80,3 +80,4 @@ end
 
 # For registration and login of users.
 gem 'devise', '~> 4.9'
+gem 'cancancan'
